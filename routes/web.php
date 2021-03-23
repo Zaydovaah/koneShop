@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\Products\ProductsComponent;
+use App\Http\Livewire\Categories\CategoriesComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +22,9 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+// categories categories
+Route::get('/categories', CategoriesComponent::class)->name('categories');
+
+// products categories
+Route::get('/products', ProductsComponent::class)->name('products');

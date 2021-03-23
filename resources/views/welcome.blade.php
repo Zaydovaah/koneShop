@@ -20,13 +20,18 @@
             padding: 0;
         }
 
+        body,
+        html {
+            height: 100vh;
+        }
+
         body {
             font-family: 'Nunito', sans-serif;
         }
 
-        html {
+        /* html {
             height: 100vh
-        }
+        } */
 
         .login-btn {
             color: #fff;
@@ -39,7 +44,6 @@
             background-color: #fff;
             outline: none;
         }
-
         .logo {
             width: 50%;
         }
@@ -48,12 +52,12 @@
 </head>
 
 <body class="antialiased">
-    <div class="row">
-        <div class="col-md-6 d-flex justify-content-center align-items-center vh-100">
+    <div class="row h-100">
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
             <img class="logo" src="/media/logo/logo.jpg" alt="logo">
         </div>
 
-        <div class="col-md-6 d-flex flex-column justify-content-center align-items-center vh-100 bg-dark">
+        <div class="col-md-6 d-flex flex-column justify-content-center align-items-center bg-dark">
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
