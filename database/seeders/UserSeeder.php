@@ -22,5 +22,7 @@ class UserSeeder extends Seeder
             'address' => 'Super Address',
             'password' => bcrypt('super')
         ]);
+
+        $superAdmin->assignRole(1);
     }
 }
