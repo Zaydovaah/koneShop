@@ -23,6 +23,9 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
+                if (Auth::user()->hasRole("User")) {
+                    return redirect()->route('guichet.select');
+                }
                 return redirect(RouteServiceProvider::HOME);
             }
         }
